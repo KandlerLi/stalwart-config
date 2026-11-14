@@ -1,0 +1,18 @@
+name: Security scan
+
+# Separate from checks.yml/apply.yml so a finding can never block an apply.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  trivy-config:
+    uses: KandlerLi/gha-common/.github/workflows/trivy-config.yml@v0.0.17
+    # Needs no AWS or cluster access, so it stays off the self-hosted runner.
+    with:
+      runs_on: '["ubuntu-latest"]'
+    permissions:
+      contents: read
