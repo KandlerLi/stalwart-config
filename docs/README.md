@@ -3,8 +3,8 @@
 Split out of [`k3s-apps`](https://github.com/KandlerLi/k3s-apps)' `modules/stalwart_config`
 so that k3s-apps holds no Terraform beyond what Argo CD can't deploy. The
 objects were adopted from the admin UI with every live value mirrored (see
-home-infra-docs' `stalwart-mail-server` runbook) and imported here without
-recreating anything (`imports.tf`, removed after the first apply).
+home-infra-docs' `stalwart-mail-server` runbook) and imported here on
+2026-11-14 without recreating anything (stalwart-config#1).
 
 ## CI
 
