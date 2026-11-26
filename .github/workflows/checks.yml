@@ -14,7 +14,6 @@ jobs:
     name: Validate
     runs-on: [self-hosted, home, debian]
     timeout-minutes: 10
-    env:
 
     steps:
       - name: Check out repository
